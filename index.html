@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Sipariş Sistemi</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Lezzet Durağı</h1>
+        <div id="cart-icon">
+            <span class="cart-count">0</span>
+            <img src="https://api.iconify.design/lucide:shopping-cart.svg" alt="Sepet">
+        </div>
+    </header>
+
+    <nav id="menu-tabs">
+        <button class="tab-button active" data-category="main">Ana Yemekler</button>
+        <button class="tab-button" data-category="appetizers">Başlangıçlar</button>
+        <button class="tab-button" data-category="soups">Çorbalar</button>
+        <button class="tab-button" data-category="desserts">Tatlılar</button>
+        <button class="tab-button" data-category="drinks">İçecekler</button>
+    </nav>
+
+    <main>
+        <section id="menu-items" class="menu-grid"></section>
+        
+        <div id="cart-sidebar" class="cart-hidden">
+            <div class="cart-header">
+                <h2>Sepetim</h2>
+                <button id="close-cart">&times;</button>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Toplam:</span>
+                    <span id="cart-total-price">0.00 ₺</span>
+                </div>
+                <button id="checkout-button">Siparişi Tamamla</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
